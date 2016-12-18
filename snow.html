@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="snow.css" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+
+    <script type="text/javascript">
+        $(function() { $("#draggable").draggable(); });
+        var i=0;
+        function a(){
+            i++;
+            // alert(i);
+            if(i==3)
+            {
+                $("#tree").css('display', 'block');
+                $("#greet").css('display', 'block');
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <audio src="jingle.mp3" autoplay="autoplay" loop="loop"></audio>
+    <img src="hat.png" style="margin-left:100px;" height="100px" class="drag-image" id="draggable"/>
+
+    <img id="tree" style="position:absolute;margin-left:900px;display:none;" src="xmas.png" height="400px"/>
+
+    <img id="greet" style="position:absolute;margin-left:400px;margin-top:-400px;display:none;" src="greet.gif" height="300px"/>
+
+    <img id="face" style="position:absolute;margin-left:-115px;margin-top:100px;" src="face.png" height="80px" width="100px"/>
+
+    <svg id="small" width="1400" height="395">
+
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:rgb(235, 235, 224);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:1" />
+        </linearGradient>
+
+        <ellipse onClick="setTimeout(a(),3000)" id="small-circle" cx="720" cy="40" rx="50" ry="38" fill="url(#grad1)" />
+        <animate xlink:href="#small-circle" attributeName="cx" from="720" to="150" dur="1s" begin="click" fill="freeze" />
+
+        <ellipse onClick="setTimeout(a(),3000)" id="medium-circle" cx="150" cy="320" rx="85" ry="65" fill="url(#grad1)" />
+        <animate xlink:href="#medium-circle" attributeName="cy" from="320" to="120" dur="1s" begin="click" fill="freeze" />
+
+        <ellipse onClick="setTimeout(a(),5000)" id="big-circle" cx="950" cy="230" rx="110" ry="92" fill="url(#grad1)" />
+        <animate xlink:href="#big-circle" attributeName="cx" from="950" to="150" dur="1s" begin="click" fill="freeze" />
+
+    </svg>
+
+    <script src="snowstorm.js"></script>
+
+</body>
+
+</html>

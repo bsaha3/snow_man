@@ -1,0 +1,35 @@
+body {
+  background-image: url("snow.jpg");
+  /*background-color: red;*/
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+#hat {
+  
+  display: block;
+
+  /*margin-top: 100px;*/
+}
+
+#svg {
+  
+  display: block;
+
+  /*margin-top: 100px;*/
+}
+
+#big-circle{
+    text-shadow: 10px 10px 5px grey;
+}
+
+.mouseDown{
+ cursor: alias;
+ /*cursor: url(flake.png), auto;*/
+
+}
+
+/*#basket{
+  
+}*/
